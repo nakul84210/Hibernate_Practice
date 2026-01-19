@@ -9,21 +9,27 @@ public class Main {
     public static void main(String[] args) {
 
         Student student = new Student();
-        student.setsName("Ram");
-        student.setsAge(12);
-        student.setRollNo(21);
+//        student.setsName("Nakul");
+//        student.setsAge(40);
+//        student.setRollNo(63);
         //System.out.println(student);
+
 
 
         SessionFactory st = new Configuration()
                 .addAnnotatedClass(com.nakul.Student.class)
+                .configure()
                 .buildSessionFactory();             //cfg.buildSessionFactory();
+
         Session session = st.openSession();
 
-        Transaction tx = session.beginTransaction();
+        student = session.find(com.nakul.Student.class, 63);
 
-        session.persist(student);
+        Transaction tx = session.beginTransaction();
+        //session.merge(student);
+        session.remove(student);
         tx.commit();
+
         session.close();
         st.close();
         System.out.println(student);
