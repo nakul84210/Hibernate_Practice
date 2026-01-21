@@ -13,6 +13,7 @@
         </property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">admin84210</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Dialect (MANDATORY) -->
         <property name="hibernate.dialect">
@@ -22,7 +23,7 @@
         <!-- Optional -->
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">create</property>
+
 
     </session-factory>
 </hibernate-configuration>
