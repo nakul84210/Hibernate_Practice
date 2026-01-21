@@ -10,10 +10,10 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-       // Student student = new Student();
-//        student.setsName("Nakul");
-//        student.setsAge(40);
-//        student.setRollNo(63);
+        // Student student = new Student();
+        // student.setsName("Nakul");
+        // student.setsAge(40);
+        // student.setRollNo(63);
         //System.out.println(student);
 
         Laptop l1 = new Laptop();
